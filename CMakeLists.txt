@@ -26,8 +26,18 @@ target_include_directories(HelloGit PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
 
-set(CPACK_GENERATOR "DEB")
+### GLOBAL CPACK ###
+set(CPACK_GENERATOR "DEB;RPM")
+set(CPACK_PACKAGE_VERSION ${VERSION_DESCRIBE})
+
+### DEB ###
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Anthony Gauchy") # required
+#set(CPACK_DEBIAN_PACKAGE_VERSION ${VERSION_DESCRIBE})
+#set(CPACK_DEBIAN_PACKAGE_NAME "${PROJECT_NAME}-${VERSION_DESCRIBE}.deb")
+
+### RPM ###
+#set(CPACK_RPM_FILE_NAME "${PROJECT_NAME}-${VERSION_DESCRIBE}.rpm")
+
 
 
 include(CPack)

@@ -135,11 +135,14 @@ function( version_from_git )
   endif( ARG_LOG )
 
   # Set parent scope variables
-  set( GIT_TAG       ${git_tag}       PARENT_SCOPE )
-  set( SEMVER        ${semver}        PARENT_SCOPE )
-  set( VERSION       ${version}       PARENT_SCOPE )
-  set( VERSION_MAJOR ${version_major} PARENT_SCOPE )
-  set( VERSION_MINOR ${version_minor} PARENT_SCOPE )
-  set( VERSION_PATCH ${version_patch} PARENT_SCOPE )
+  set( GIT_TAG          ${git_tag}       PARENT_SCOPE )
+  set( GIT_HASH         ${git_hash}       PARENT_SCOPE )
+  set( SEMVER           ${semver}        PARENT_SCOPE )
+  set( VERSION          ${version}       PARENT_SCOPE )
+  set( VERSION_MAJOR    ${version_major} PARENT_SCOPE )
+  set( VERSION_MINOR    ${version_minor} PARENT_SCOPE )
+  set( VERSION_PATCH    ${version_patch} PARENT_SCOPE )
+  set( VERSION_DESCRIBE ${git_describe} PARENT_SCOPE )
+
 
 endfunction( version_from_git )
