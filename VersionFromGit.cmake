@@ -61,7 +61,7 @@ function( version_from_git )
       )
   endif()
 
-  if( git_tag MATCHES "^v(0|[1-9][0-9]*)[.](0|[1-9][0-9]*)[.](0|[1-9][0-9]*)(-[.0-9A-Za-z-]+)?([+][.0-9A-Za-z-]+)?$" )
+  if( git_tag MATCHES "^(0|[1-9][0-9]*)[.](0|[1-9][0-9]*)[.](0|[1-9][0-9]*)(-[.0-9A-Za-z-]+)?([+][.0-9A-Za-z-]+)?$" )
     set( version_major "${CMAKE_MATCH_1}" )
     set( version_minor "${CMAKE_MATCH_2}" )
     set( version_patch "${CMAKE_MATCH_3}" )
