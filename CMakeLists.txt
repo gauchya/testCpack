@@ -28,19 +28,19 @@ target_include_directories(HelloGit PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
 
+install(TARGETS HelloGit DESTINATION bin/hellogit)
+
 ### GLOBAL CPACK ###
-set(CPACK_GENERATOR "DEB;RPM")
+set(CPACK_GENERATOR "DEB;RPM;TGZ")
 set(CPACK_PACKAGE_VERSION ${VERSION_DESCRIBE})
 
 ### DEB ###
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Anthony Gauchy") # required
 
 ### RPM ###
-set(CPACK_RPM_PACKAGE_DEBUG 1)
-set(CPACK_RPM_COMPONENT_INSTALL ON)
-
-set(CPACK_RPM_DEVEL_DEBUGINFO_PACKAGE ON)
-
+#set(CPACK_RPM_PACKAGE_DEBUG 1)
+set(CPACK_RPM_BUILD_SOURCE_DIRS_PREFIX "/usr/src/debug/hellogit")
+set(CPACK_RPM_DEBUGINFO_PACKAGE ON)
 
 
 include(CPack)
