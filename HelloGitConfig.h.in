@@ -1,0 +1,5 @@
+#include <string>
+
+#define HelloGit_VERSION_MAJOR @HelloGit_VERSION_MAJOR@
+#define HelloGit_VERSION_MINOR @HelloGit_VERSION_MINOR@
+extern const std::string HelloGit_VERSION = "@HelloGit_VERSION@";
