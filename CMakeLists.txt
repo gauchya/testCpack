@@ -25,3 +25,9 @@ add_executable(HelloGit hellogit.cc)
 target_include_directories(HelloGit PUBLIC
                            "${PROJECT_BINARY_DIR}"
                            )
+
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Anthony Gauchy") # required
+
+
+include(CPack)
